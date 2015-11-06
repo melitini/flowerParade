@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 	<head>
 		<title> GA FLower Parade </title>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<!--CSS-->
 		<link rel="stylesheet" type="text/css" href="flowerStyle.css">
-		<!--JS-->
-		 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script
+		
+		<!--jQuery-->
+		 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		 <!-- Underscore -->
+		 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+		 <!-- JavaScript -->
     	<script type="text/javascript" src="flowerObjects.js"></script>
     	<script type="text/javascript" src="flowerData.js"></script>
-		
 
-		<!--Fonts!-->
+		<!--Fonts-->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic|Raleway:400,100,200,300,600|Poiret+One' rel='stylesheet' type='text/css'>
-		
 	</head>
 	<body>
 			<div>
 				<div class="title">
 				<h1>The San Francisco First Annual <br> General Assembly Parade of Flowers</h1>
 				</div>
-				<div class="sponsors">
-					<h2>Brought to you thanks to the tireless efforts of the WDI #21 Cohort, and their teachers infinite wisdom.</h2>
 
-					 <script type="text/template" id="flower-template">
-					<div>
-				<div class="flower-card">
-					<img src= "<%= image %>">
-					<ul>
-						<li class="fName">Flower Name: "<%= image %>"</li>
-						<li class="fColor">Flower Color: "<%= color %>"</li>
-						<li class="pCount">Petal Count: "<%= petals %>"</li>
-						<li class="lCount">Leaf Count: "<%= leafCount %>"</li>
-						<li class="origin">Origin: "<%= origin %>"</li>
-						<li class="edible">Edible:"<%= isEdible %>"</li>
-						<li class="sPretty">Smells Pretty: "<%= smellsPretty %>"</li>
-						<li class="comments">Comments: "<%= commnets %>"</li>
-					</ul>
+				<div class="purpose">
+					<h2>This website was built to showcase my knowledge of underscore templating and object oriented programming. View and download the source code <a href="#">here</a>.</h2>
 				</div>
+
 				<hr>
-			</div>
+
+				<!-- flower template placeholder -->
+				<div id="flower-placeholder">
+
+					<!-- flower template -->
+					<script type="text/template" id="flower-template">
+					<div class="flower">
+						<img src= "<%= image %>">
+						<ul>
+							<li><span>Flower Name: </span><%= name %></li>
+							<li><span>Flower Color: </span> <%= describe() %></li>
+							<li><span>Petal Count: </span> <%= petals %></li>
+							<li><span>Leaf Count: </span> <%= leafCount %></li>
+							<li><span>Origin: </span> <%= origin %></li>
+							<li><span>Is it Edible?: </span><%= tastesYummy(isEdible) %></li>
+							<li><span>Smells Nice?: </span> <%= hasGoodSmell(smellsPretty) %></li>
+							<li><span>Comments: </span> <%= comments %></li>
+						</ul>
+					</div>
+					<hr>
+					</script>
+
+				</div>
 	</body>
+	<footer>
+		<center>Made with much curiosity by <a href="http://linkedin.com/in/meldailey">Melissa M. Dailey</a> on August 2015 for General Assembly San Francisco</center> 
+	</footer>
 </html>

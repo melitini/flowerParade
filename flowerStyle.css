@@ -1,6 +1,8 @@
 
 body {
-
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
 
 }
 
@@ -9,7 +11,9 @@ body {
 	padding: 80px;
 	background-image: url("https://images.unsplash.com/reserve/OnRKhvlFQ2uJNSx5O3cc_DSC00560.jpg?q=80&fm=jpg&s=e3633227d84a58860f40e9a90fdfdad7");
 	background-size: cover;
+	box-shadow: 0px 0px 55px 0px #888888;
 }
+
 h1 {
 	text-align: center;
 	font-family: 'Poiret One', cursive;
@@ -18,13 +22,14 @@ h1 {
 	padding: 50px;
 
 }
-.sponsors {
-	padding: 100px 0px;
+.purpose {
+	padding: 50px 0px;
+	text-decoration: none;
 }
 
 h2 {
 	font-family: 'Raleway', sans-serif;
-	font-weight: 100;
+	font-weight: 100px;
 	font-size: 30px;
 	text-align: center;
 	color: #8b8989;
@@ -33,11 +38,13 @@ h2 {
 
 
 }
-.flower-card {
-	height: 355px;
+.flower {
+	font-family: Helvetica;
 	background-color: #EFF3F3;
-	padding: 30px 0px;
+	padding: 30px 20px;
+	text-decoration: none;
 }
+
 
 img {
 	float: left;
@@ -51,11 +58,23 @@ img {
 
 ul {
 	display: inline;
+	list-style-type: none;
 }
 
 li {
 	padding-left: 380px;
 	margin-bottom: 20px;
-	font-family: 'Poiret One', cursive;
-	}
+	font-family: courier;
+	font-size: 15px;
+}
+
+li span {
+	font-size: 20px;
+	font-family: Helvetica;
+	color: grey;
+}
+
+footer {
+	padding: 20px 10px;
+}
 
